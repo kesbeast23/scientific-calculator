@@ -1,15 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#FFC107</color>
-    <color name="colorPrimaryDark">#FFA000</color>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="oper_text_color">#1db7bd</color>
+    <color name="equl_text_color">#ffffff</color>
+    <color name="main_backg_color">#ffffff</color>
+    <color name="input_backg_color">#ffffff</color>
     <color name="backgroundcolor">#fcfcfc</color>
     <color name="deeppurple">#7c4dff</color>
     <color name="yello">#ffb300</color>
     <color name="green">#008577</color>
     <color name="darkgreen">#00574B</color>
-    <color name="colorAccent">#D81B60</color>
     <color name="lightgrey">#ededed</color>
     <color name="steelgrey">#b0b08080</color>
     <color name="blue">#b0000fff</color>
+
 
 </resources>

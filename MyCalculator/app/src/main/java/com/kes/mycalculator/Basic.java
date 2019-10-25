@@ -13,7 +13,7 @@ public class Basic extends AppCompatActivity implements View.OnClickListener {
     double fn,sn;
     String operator;
     EditText et;
-    Button back,clear,plus,minus,b7,b8,b9,multiply,b4,b5,b6,div,b1,b2,b3,equal,dot,b0,plusMinus,close;
+    Button clear,plus,minus,b7,b8,b9,multiply,b4,b5,b6,div,b1,b2,b3,equal,dot,b0,plusMinus,close;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,7 +22,7 @@ public class Basic extends AppCompatActivity implements View.OnClickListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_basic);
         et = (EditText) findViewById(R.id.et);
-        back = (Button) findViewById(R.id.back);
+        //back = (Button) findViewById(R.id.back);
         clear = (Button) findViewById(R.id.clear);
         plus = (Button) findViewById(R.id.plus);
         minus = (Button) findViewById(R.id.minus);
@@ -41,9 +41,8 @@ public class Basic extends AppCompatActivity implements View.OnClickListener {
         dot = (Button) findViewById(R.id.dot);
         b0 = (Button) findViewById(R.id.b0);
         plusMinus = (Button) findViewById(R.id.plus_minus);
-        close = (Button) findViewById(R.id.close);
 
-        back.setOnClickListener(this);
+       // back.setOnClickListener(this);
         clear.setOnClickListener(this);
         plus.setOnClickListener(this);
         minus.setOnClickListener(this);
@@ -106,11 +105,11 @@ public class Basic extends AppCompatActivity implements View.OnClickListener {
             case R.id.clear:
                 et.setText("");
                 break;
-            case R.id.back:
+          /*  case R.id.back:
                 StringBuilder stB = new StringBuilder(string);
                 stB.deleteCharAt(string.length()-1);
                 et.setText(stB.toString());
-                break;
+                break;*/
             case R.id.plus:
                 operator="+";
                 fn=Double.parseDouble(et.getText().toString());
@@ -155,9 +154,6 @@ public class Basic extends AppCompatActivity implements View.OnClickListener {
                et.setText(result+"");
                 Toast toast =Toast.makeText(this,"Calculation Complete",Toast.LENGTH_SHORT);
                 toast.show();
-                break;
-            case R.id.close:
-                finish();
                 break;
 
 
