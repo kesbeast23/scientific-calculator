@@ -13,7 +13,7 @@ public class Basic extends AppCompatActivity implements View.OnClickListener {
     double fn,sn;
     String operator;
     EditText et;
-    Button clear,plus,minus,b7,b8,b9,multiply,b4,b5,b6,div,b1,b2,b3,equal,dot,b0,plusMinus,close;
+    Button clear,plus,minus,b7,b8,b9,multiply,b4,b5,b6,div,b1,b2,b3,equal,dot,b0,plusMinus;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,7 +61,6 @@ public class Basic extends AppCompatActivity implements View.OnClickListener {
         dot.setOnClickListener(this);
         b0.setOnClickListener(this);
         plusMinus.setOnClickListener(this);
-        close.setOnClickListener(this);
 
     }
 
