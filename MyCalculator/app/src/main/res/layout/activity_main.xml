@@ -58,6 +58,7 @@
         <androidx.cardview.widget.CardView
             android:foreground="?android:attr/selectableItemBackground"
             android:clickable="true"
+            android:onClick="onTrig"
             android:layout_width="140dp"
             android:layout_height="160dp"
             android:layout_margin="10dp">
@@ -77,7 +78,7 @@
                     android:layout_height="wrap_content"
                     android:textStyle="bold"
                     android:layout_marginTop="10dp"
-                    android:text="Trigonometric"/>
+                    android:text="Advanced"/>
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
@@ -87,7 +88,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="make basic calculations"
+                    android:text="make advanced calculations"
                     android:padding="5dp"
                     android:textColor="@color/steelgrey"/>
             </LinearLayout>
@@ -122,7 +123,7 @@
                     android:layout_height="wrap_content"
                     android:textStyle="bold"
                     android:layout_marginTop="10dp"
-                    android:text="Logarithms"/>
+                    android:text="History"/>
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
@@ -132,7 +133,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="make basic calculations"
+                    android:text="view calculation history"
                     android:padding="5dp"
                     android:textColor="@color/steelgrey"/>
             </LinearLayout>
@@ -140,6 +141,7 @@
         <androidx.cardview.widget.CardView
             android:foreground="?android:attr/selectableItemBackground"
             android:clickable="true"
+            android:onClick="onBase"
             android:layout_width="140dp"
             android:layout_height="160dp"
             android:layout_margin="10dp">
@@ -169,7 +171,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="make basic calculations"
+                    android:text="convert between bases"
                     android:padding="5dp"
                     android:textColor="@color/steelgrey"/>
             </LinearLayout>
@@ -214,7 +216,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="make basic calculations"
+                    android:text="help with use"
                     android:padding="5dp"
                     android:textColor="@color/steelgrey"/>
             </LinearLayout>
