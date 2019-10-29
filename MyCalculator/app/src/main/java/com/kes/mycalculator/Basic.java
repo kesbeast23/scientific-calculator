@@ -1,19 +1,23 @@
 package com.kes.mycalculator;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import java.util.ArrayList;
 
 public class Basic extends AppCompatActivity implements View.OnClickListener {
 
-    double fn,sn;
-    String operator;
-    EditText et;
-    Button clear,plus,minus,b7,b8,b9,multiply,b4,b5,b6,div,b1,b2,b3,equal,dot,b0,plusMinus;
+    Calculation calculations = new Calculation(this);
+
+
+    private TextView sub;
+    private TextView main;
+    private Button clear,plus,minus,b7,b8,b9,multiply,b4,b5,b6,div,b1,b2,b3,
+            equal,dot,b0,plusMinus,back,butBra,butBraClose,mod;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,28 +25,32 @@ public class Basic extends AppCompatActivity implements View.OnClickListener {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_basic);
-        et = (EditText) findViewById(R.id.et);
-        //back = (Button) findViewById(R.id.back);
-        clear = (Button) findViewById(R.id.clear);
-        plus = (Button) findViewById(R.id.plus);
-        minus = (Button) findViewById(R.id.minus);
-        b7 = (Button) findViewById(R.id.b7);
-        b8 = (Button) findViewById(R.id.b8);
-        b9 = (Button) findViewById(R.id.b9);
-        multiply = (Button) findViewById(R.id.multiply);
-        b4 = (Button) findViewById(R.id.b4);
-        b5 = (Button) findViewById(R.id.b5);
-        b6 = (Button) findViewById(R.id.b6);
-        div = (Button) findViewById(R.id.div);
-        b1 = (Button) findViewById(R.id.b1);
-        b2 = (Button) findViewById(R.id.b2);
-        b3 = (Button) findViewById(R.id.b3);
-        equal = (Button) findViewById(R.id.equal);
-        dot = (Button) findViewById(R.id.dot);
-        b0 = (Button) findViewById(R.id.b0);
-        plusMinus = (Button) findViewById(R.id.plus_minus);
+        sub =  findViewById(R.id.et);
+        main = findViewById(R.id.result);
+        back = findViewById(R.id.back);
+        clear =findViewById(R.id.clear);
+        plus =  findViewById(R.id.plus);
+        minus = findViewById(R.id.minus);
+        b7 = findViewById(R.id.b7);
+        b8 = findViewById(R.id.b8);
+        b9 = findViewById(R.id.b9);
+        multiply = findViewById(R.id.multiply);
+        b4 = findViewById(R.id.b4);
+        b5 = findViewById(R.id.b5);
+        b6 = findViewById(R.id.b6);
+        div = findViewById(R.id.div);
+        b1 = findViewById(R.id.b1);
+        b2 = findViewById(R.id.b2);
+        b3 = findViewById(R.id.b3);
+        equal = findViewById(R.id.equal);
+        dot = findViewById(R.id.dot);
+        b0 = findViewById(R.id.b0);
+        plusMinus = findViewById(R.id.plus_minus);
+        butBra = findViewById(R.id.butbra);
+        butBraClose = findViewById(R.id.butbraClose);
+        mod = findViewById(R.id.mod);
 
-       // back.setOnClickListener(this);
+        back.setOnClickListener(this);
         clear.setOnClickListener(this);
         plus.setOnClickListener(this);
         minus.setOnClickListener(this);
@@ -61,100 +69,128 @@ public class Basic extends AppCompatActivity implements View.OnClickListener {
         dot.setOnClickListener(this);
         b0.setOnClickListener(this);
         plusMinus.setOnClickListener(this);
+        butBra.setOnClickListener(this);
+        butBraClose.setOnClickListener(this);
+        mod.setOnClickListener(this);
 
     }
 
     @Override
     public void onClick(View v) {
-        String string = et.getText().toString();
+
         switch (v.getId()){
             case R.id.b0:
-                et.setText(string+b0.getText());
+                calculations.numberClicked("0");
+                main.setText(calculations.getCurrentNumber());
+                sub.setText(calculations.calc(calculations.numbers));
                 break;
             case R.id.b1:
-                et.setText(string+b1.getText());
+                calculations.numberClicked("1");
+                main.setText(calculations.getCurrentNumber());
+                sub.setText(calculations.calc(calculations.numbers));
                 break;
             case R.id.b2:
-                et.setText(string+b2.getText());
+                calculations.numberClicked("2");
+                main.setText(calculations.getCurrentNumber());
+                sub.setText(calculations.calc(calculations.numbers));
                 break;
             case R.id.b3:
-                et.setText(string+b3.getText());
+                calculations.numberClicked("3");
+                main.setText(calculations.getCurrentNumber());
+                sub.setText(calculations.calc(calculations.numbers));
                 break;
             case R.id.b4:
-                et.setText(string+b4.getText());
+                calculations.numberClicked("4");
+                main.setText(calculations.getCurrentNumber());
+                sub.setText(calculations.calc(calculations.numbers));
                 break;
             case R.id.b5:
-                et.setText(string+b5.getText());
+                calculations.numberClicked("5");
+                main.setText(calculations.getCurrentNumber());
+                sub.setText(calculations.calc(calculations.numbers));
                 break;
             case R.id.b6:
-                et.setText(string+b6.getText());
+                calculations.numberClicked("6");
+                main.setText(calculations.getCurrentNumber());
+                sub.setText(calculations.calc(calculations.numbers));
                 break;
             case R.id.b7:
-                et.setText(string+b7.getText());
+                calculations.numberClicked("7");
+                main.setText(calculations.getCurrentNumber());
+                sub.setText(calculations.calc(calculations.numbers));
                 break;
             case R.id.b8:
-                et.setText(string+b8.getText());
+                calculations.numberClicked("8");
+                main.setText(calculations.getCurrentNumber());
+                sub.setText(calculations.calc(calculations.numbers));
                 break;
             case R.id.b9:
-                et.setText(string+b9.getText());
-                break;
+                calculations.numberClicked("9");
+                main.setText(calculations.getCurrentNumber());
+                sub.setText(calculations.calc(calculations.numbers));
             case R.id.dot:
-                et.setText(string+dot.getText());
+                calculations.decimalClicked();
+                main.setText(calculations.getCurrentNumber());
+                sub.setText(calculations.calc(calculations.numbers));
                 break;
             case R.id.clear:
-                et.setText("");
+                calculations.clear();
+                main.setText("0");
+                sub.setText(calculations.calc(calculations.numbers));
                 break;
-          /*  case R.id.back:
-                StringBuilder stB = new StringBuilder(string);
-                stB.deleteCharAt(string.length()-1);
-                et.setText(stB.toString());
-                break;*/
+           case R.id.back:
+               calculations.bs();
+               main.setText(calculations.getCurrentNumber());
+               sub.setText(calculations.calc(calculations.numbers));
+                break;
             case R.id.plus:
-                operator="+";
-                fn=Double.parseDouble(et.getText().toString());
-                et.setText("");
+                calculations.operatorClicked("+");
+                main.setText(calculations.getCurrentNumber());
+                sub.setText(calculations.calc(calculations.numbers));
                 break;
             case R.id.minus:
-                operator="-";
-                fn=Double.parseDouble(et.getText().toString());
-                et.setText("");
+                calculations.operatorClicked("-");
+                main.setText(calculations.getCurrentNumber());
+                sub.setText(calculations.calc(calculations.numbers));
                 break;
             case R.id.multiply:
-                operator="*";
-                fn=Double.parseDouble(et.getText().toString());
-                et.setText("");
+                calculations.operatorClicked("*");
+                main.setText(calculations.getCurrentNumber());
+                sub.setText(calculations.calc(calculations.numbers));
                 break;
             case R.id.div:
-                operator="/";
-                fn=Double.parseDouble(et.getText().toString());
-                et.setText("");
+                calculations.operatorClicked("/");
+                main.setText(calculations.getCurrentNumber());
+                sub.setText(calculations.calc(calculations.numbers));
+                break;
+            case R.id.butbra:
+                calculations.parent_openClicked();
+                main.setText(calculations.getCurrentNumber());
+                sub.setText(calculations.calc(calculations.numbers));
+                break;
+            case R.id.butbraClose:
+                calculations.parent_closeClicked();
+                main.setText(calculations.getCurrentNumber());
+                sub.setText(calculations.calc(calculations.numbers));
+                break;
+            case R.id.mod:
+                calculations.operatorClicked("mod");
+                main.setText(calculations.getCurrentNumber());
+                sub.setText(calculations.calc(calculations.numbers));
                 break;
             case R.id.plus_minus:
-                et.setText(Double.parseDouble(et.getText().toString())*(-1)+"");
+                calculations.operatorClicked("±");
+                main.setText(calculations.getCurrentNumber());
+                sub.setText(calculations.calc(calculations.numbers));
                 break;
             case R.id.equal:
-                sn=Double.parseDouble(et.getText().toString());
-                double result=0;
-               switch (operator){
-                   case "+":
-                       result=fn+sn;
-                       break;
-                   case "-":
-                       result=fn-sn;
-                       break;
-                   case "*":
-                       result=fn*sn;
-                       break;
-                   case "/":
-                       result=fn/sn;
-                       break;
-
-               }
-               et.setText(result+"");
+                ArrayList<String> expression = calculations.numbers;
+                calculations.evaluateAnswer();
+                main.setText(calculations.answer);
+                sub.setText("");
                 Toast toast =Toast.makeText(this,"Calculation Complete",Toast.LENGTH_SHORT);
                 toast.show();
                 break;
-
 
         }
     }

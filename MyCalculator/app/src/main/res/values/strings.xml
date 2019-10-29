@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">MyCalculator</string>
+    <string name="app_name">SebalaMakgolo</string>
     <string name="start">Start</string>
     <string name="back"><![CDATA[<<]]></string>
     <string name="clear">C</string>
@@ -11,14 +11,14 @@
     <string name="b4">4</string>
     <string name="b5">5</string>
     <string name="b6">6</string>
-    <string name="div">/</string>
+    <string name="div">\u00F7</string>
     <string name="b1">1</string>
     <string name="b2">2</string>
     <string name="b3">3</string>
     <string name="equal">=</string>
     <string name="dot">.</string>
     <string name="b0">0</string>
-    <string name="plus_minus">+-</string>
+    <string name="plus_minus">±</string>
     <string name="close">OFF</string>
     <string name="multiply">*</string>
 </resources>

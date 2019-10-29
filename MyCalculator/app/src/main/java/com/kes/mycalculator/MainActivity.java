@@ -17,4 +17,12 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, Basic.class);
         startActivity(intent);
     }
+    public void onTrig(View view){
+        Intent intent = new Intent(this, Trigonmentry.class);
+        startActivity(intent);
+    }
+    public void onBase(View view){
+        Intent intent = new Intent(this, Bases.class);
+        startActivity(intent);
+    }
 }

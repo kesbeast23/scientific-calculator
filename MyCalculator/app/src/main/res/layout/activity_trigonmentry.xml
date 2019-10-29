@@ -1,9 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/main_backg_color"
-    android:orientation="vertical"
-    >
+    android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -13,7 +13,7 @@
         <TextView
             android:id="@+id/result"
             android:layout_width="match_parent"
-            android:layout_height="90dp"
+            android:layout_height="50dp"
             android:background="@color/input_backg_color"
             android:ems="10"
             android:gravity="center_vertical"
@@ -23,7 +23,7 @@
         <TextView
             android:id="@+id/et"
             android:layout_width="match_parent"
-            android:layout_height="60dp"
+            android:layout_height="40dp"
             android:background="@color/input_backg_color"
             android:textAlignment="textEnd"
             android:textSize="18sp" />
@@ -40,26 +40,29 @@
             android:layout_weight="1"
             android:orientation="horizontal">
 
-            <Button
-                android:id="@+id/mc"
+            <ToggleButton
+                android:id="@+id/inverse"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="@drawable/oper_button"
-                android:text="mc"
+                android:text="inv"
+                android:textOff="inv"
+                android:textOn="inv"
+                android:textAllCaps="false"
                 android:textColor="@color/oper_text_color"
-                android:textSize="24sp" />
+                android:textSize="20sp" />
 
             <Button
-                android:id="@+id/mrecall"
+                android:id="@+id/e_raisedto_x"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="@drawable/oper_button"
-                android:text="mr"
+                android:text="e^x"
+                android:textAllCaps="false"
                 android:textColor="@color/oper_text_color"
-                android:textSize="24sp" />
-
+                android:textSize="20sp" />
             <Button
                 android:id="@+id/clear"
                 android:layout_width="match_parent"
@@ -68,7 +71,7 @@
                 android:background="@drawable/oper_button"
                 android:text="@string/clear"
                 android:textColor="@color/oper_text_color"
-                android:textSize="24sp" />
+                android:textSize="20sp" />
 
             <Button
                 android:id="@+id/back"
@@ -76,16 +79,10 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="@drawable/oper_button"
-                android:text="bs"
+                android:text="←"
+                android:textAllCaps="false"
                 android:textColor="@color/oper_text_color"
-                android:textSize="24sp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="horizontal">
+                android:textSize="20sp" />
 
             <Button
                 android:id="@+id/butbra"
@@ -95,8 +92,7 @@
                 android:background="@drawable/oper_button"
                 android:text="("
                 android:textColor="@color/oper_text_color"
-                android:textSize="24sp" />
-
+                android:textSize="20sp" />
             <Button
                 android:id="@+id/butbraClose"
                 android:layout_width="match_parent"
@@ -105,7 +101,7 @@
                 android:background="@drawable/oper_button"
                 android:text=")"
                 android:textColor="@color/oper_text_color"
-                android:textSize="24sp" />
+                android:textSize="20sp" />
 
             <Button
                 android:id="@+id/mod"
@@ -115,7 +111,7 @@
                 android:background="@drawable/oper_button"
                 android:text="%"
                 android:textColor="@color/oper_text_color"
-                android:textSize="24sp" />
+                android:textSize="20sp" />
 
             <Button
                 android:id="@+id/div"
@@ -125,7 +121,7 @@
                 android:background="@drawable/oper_button"
                 android:text="@string/div"
                 android:textColor="@color/oper_text_color"
-                android:textSize="24sp" />
+                android:textSize="20sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -135,13 +131,57 @@
             android:orientation="horizontal">
 
             <Button
+                android:id="@+id/m"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/oper_button"
+                android:text="m"
+                android:textAllCaps="false"
+                android:textColor="@color/oper_text_color"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/sin"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/oper_button"
+                android:text="sin"
+                android:textAllCaps="false"
+                android:textColor="@color/oper_text_color"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/cos"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/oper_button"
+                android:text="cos"
+                android:textAllCaps="false"
+                android:textColor="@color/oper_text_color"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/tan"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/oper_button"
+                android:text="tan"
+                android:textAllCaps="false"
+                android:textColor="@color/oper_text_color"
+                android:textSize="20sp" />
+
+            <Button
                 android:id="@+id/b7"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="@drawable/numbers_button"
                 android:text="@string/b7"
-                android:textSize="24sp" />
+                android:textSize="20sp" />
 
             <Button
                 android:id="@+id/b8"
@@ -150,7 +190,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/numbers_button"
                 android:text="@string/b8"
-                android:textSize="24sp" />
+                android:textSize="20sp" />
 
             <Button
                 android:id="@+id/b9"
@@ -159,7 +199,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/numbers_button"
                 android:text="@string/b9"
-                android:textSize="24sp" />
+                android:textSize="20sp" />
 
             <Button
                 android:id="@+id/multiply"
@@ -169,7 +209,7 @@
                 android:background="@drawable/oper_button"
                 android:text="@string/multiply"
                 android:textColor="@color/oper_text_color"
-                android:textSize="24sp" />
+                android:textSize="20sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -179,13 +219,57 @@
             android:orientation="horizontal">
 
             <Button
+                android:id="@+id/mrecall"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/oper_button"
+                android:text="m-"
+                android:textAllCaps="false"
+                android:textColor="@color/oper_text_color"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/e"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/oper_button"
+                android:text="e"
+                android:textAllCaps="false"
+                android:textColor="@color/oper_text_color"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/ln"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/oper_button"
+                android:text="ln"
+                android:textAllCaps="false"
+                android:textColor="@color/oper_text_color"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/log"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/oper_button"
+                android:text="log"
+                android:textAllCaps="false"
+                android:textColor="@color/oper_text_color"
+                android:textSize="20sp" />
+
+            <Button
                 android:id="@+id/b4"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="@drawable/numbers_button"
                 android:text="@string/b4"
-                android:textSize="24sp" />
+                android:textSize="20sp" />
 
             <Button
                 android:id="@+id/b5"
@@ -194,7 +278,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/numbers_button"
                 android:text="@string/b5"
-                android:textSize="24sp" />
+                android:textSize="20sp" />
 
             <Button
                 android:id="@+id/b6"
@@ -203,7 +287,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/numbers_button"
                 android:text="@string/b6"
-                android:textSize="24sp" />
+                android:textSize="20sp" />
 
             <Button
                 android:id="@+id/minus"
@@ -213,7 +297,7 @@
                 android:background="@drawable/oper_button"
                 android:text="@string/minus"
                 android:textColor="@color/oper_text_color"
-                android:textSize="24sp" />
+                android:textSize="20sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -223,13 +307,57 @@
             android:orientation="horizontal">
 
             <Button
+                android:id="@+id/mstore"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/oper_button"
+                android:text="m+"
+                android:textAllCaps="false"
+                android:textColor="@color/oper_text_color"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/pow2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/oper_button"
+                android:text="x^2"
+                android:textAllCaps="false"
+                android:textColor="@color/oper_text_color"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/pow3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/oper_button"
+                android:text="x^3"
+                android:textAllCaps="false"
+                android:textColor="@color/oper_text_color"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/powY"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/oper_button"
+                android:text="x^y"
+                android:textAllCaps="false"
+                android:textColor="@color/oper_text_color"
+                android:textSize="20sp" />
+
+            <Button
                 android:id="@+id/b1"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="@drawable/numbers_button"
                 android:text="@string/b1"
-                android:textSize="24sp" />
+                android:textSize="20sp" />
 
             <Button
                 android:id="@+id/b2"
@@ -238,7 +366,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/numbers_button"
                 android:text="@string/b2"
-                android:textSize="24sp" />
+                android:textSize="20sp" />
 
             <Button
                 android:id="@+id/b3"
@@ -247,7 +375,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/numbers_button"
                 android:text="@string/b3"
-                android:textSize="24sp" />
+                android:textSize="20sp" />
 
             <Button
                 android:id="@+id/plus"
@@ -257,7 +385,7 @@
                 android:background="@drawable/oper_button"
                 android:text="@string/plus"
                 android:textColor="@color/oper_text_color"
-                android:textSize="24sp" />
+                android:textSize="20sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -267,13 +395,56 @@
             android:orientation="horizontal">
 
             <Button
+                android:id="@+id/tenPowX"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/oper_button"
+                android:text="10^x"
+                android:textAllCaps="false"
+                android:textColor="@color/oper_text_color"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/sqrt"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/oper_button"
+                android:text="√"
+                android:textAllCaps="false"
+                android:textColor="@color/oper_text_color"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/yrt"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/oper_button"
+                android:text="y√x"
+                android:textAllCaps="false"
+                android:textColor="@color/oper_text_color"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/oneX"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/oper_button"
+                android:text="1/X"
+                android:textColor="@color/oper_text_color"
+                android:textSize="20sp" />
+
+            <Button
                 android:id="@+id/dot"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="@drawable/numbers_button"
                 android:text="@string/dot"
-                android:textSize="24sp" />
+                android:textSize="20sp" />
 
             <Button
                 android:id="@+id/b0"
@@ -282,7 +453,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/numbers_button"
                 android:text="@string/b0"
-                android:textSize="24sp" />
+                android:textSize="20sp" />
 
             <Button
                 android:id="@+id/plus_minus"
@@ -290,8 +461,8 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="@drawable/numbers_button"
-                android:text="@string/plus_minus"
-                android:textSize="24sp" />
+                android:text="±"
+                android:textSize="20sp" />
 
             <Button
                 android:id="@+id/equal"
@@ -301,7 +472,7 @@
                 android:background="@drawable/equl_button"
                 android:text="@string/equal"
                 android:textColor="@color/equl_text_color"
-                android:textSize="24sp" />
+                android:textSize="20sp" />
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>
