@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">SebalaMakgolo</string>
     <string name="start">Start</string>
-    <string name="back"><![CDATA[<<]]></string>
+    <string name="back">←</string>
     <string name="clear">C</string>
     <string name="plus">+</string>
     <string name="minus">-</string>
@@ -21,4 +21,27 @@
     <string name="plus_minus">±</string>
     <string name="close">OFF</string>
     <string name="multiply">*</string>
+    <string name="inv">inv</string>
+    <string name="mod">%</string>
+    <string name="inv">inv</string>
+    <string name="e_x">e^x</string>
+    <string name="open">(</string>
+    <string name="closeb">)</string>
+    <string name="sin">sin</string>
+    <string name="mc">m-</string>
+    <string name="log">log</string>
+    <string name="m">m</string>
+    <string name="cos">cos</string>
+    <string name="tan">tan</string>
+    <string name="e">e</string>
+    <string name="ln">ln</string>
+    <string name="mr">m+</string>
+    <string name="x_2">x^2</string>
+    <string name="x_3">x^3</string>
+    <string name="x_y">x^y</string>
+    <string name="_10_x">10^x</string>
+    <string name="_1_x">1/X</string>
+    <string name="sqrt">√</string>
+    <string name="y_x">y√x</string>
+    <string name="negate">±</string>
 </resources>

@@ -46,9 +46,9 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="@drawable/oper_button"
-                android:text="inv"
-                android:textOff="inv"
-                android:textOn="inv"
+                android:text="@string/inv"
+                android:textOff="@string/inv"
+                android:textOn="@string/inv"
                 android:textAllCaps="false"
                 android:textColor="@color/oper_text_color"
                 android:textSize="20sp" />
@@ -59,7 +59,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="@drawable/oper_button"
-                android:text="e^x"
+                android:text="@string/e_x"
                 android:textAllCaps="false"
                 android:textColor="@color/oper_text_color"
                 android:textSize="20sp" />
@@ -79,7 +79,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="@drawable/oper_button"
-                android:text="←"
+                android:text="@string/back"
                 android:textAllCaps="false"
                 android:textColor="@color/oper_text_color"
                 android:textSize="20sp" />
@@ -90,7 +90,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="@drawable/oper_button"
-                android:text="("
+                android:text="@string/open"
                 android:textColor="@color/oper_text_color"
                 android:textSize="20sp" />
             <Button
@@ -99,7 +99,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="@drawable/oper_button"
-                android:text=")"
+                android:text="@string/closeb"
                 android:textColor="@color/oper_text_color"
                 android:textSize="20sp" />
 
@@ -109,7 +109,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="@drawable/oper_button"
-                android:text="%"
+                android:text="@string/mod"
                 android:textColor="@color/oper_text_color"
                 android:textSize="20sp" />
 
@@ -136,7 +136,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="@drawable/oper_button"
-                android:text="m"
+                android:text="@string/m"
                 android:textAllCaps="false"
                 android:textColor="@color/oper_text_color"
                 android:textSize="20sp" />
@@ -147,7 +147,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="@drawable/oper_button"
-                android:text="sin"
+                android:text="@string/sin"
                 android:textAllCaps="false"
                 android:textColor="@color/oper_text_color"
                 android:textSize="20sp" />
@@ -158,7 +158,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="@drawable/oper_button"
-                android:text="cos"
+                android:text="@string/cos"
                 android:textAllCaps="false"
                 android:textColor="@color/oper_text_color"
                 android:textSize="20sp" />
@@ -169,7 +169,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="@drawable/oper_button"
-                android:text="tan"
+                android:text="@string/tan"
                 android:textAllCaps="false"
                 android:textColor="@color/oper_text_color"
                 android:textSize="20sp" />
@@ -224,7 +224,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="@drawable/oper_button"
-                android:text="m-"
+                android:text="@string/mc"
                 android:textAllCaps="false"
                 android:textColor="@color/oper_text_color"
                 android:textSize="20sp" />
@@ -235,7 +235,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="@drawable/oper_button"
-                android:text="e"
+                android:text="@string/e"
                 android:textAllCaps="false"
                 android:textColor="@color/oper_text_color"
                 android:textSize="20sp" />
@@ -246,7 +246,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="@drawable/oper_button"
-                android:text="ln"
+                android:text="@string/ln"
                 android:textAllCaps="false"
                 android:textColor="@color/oper_text_color"
                 android:textSize="20sp" />
@@ -257,7 +257,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="@drawable/oper_button"
-                android:text="log"
+                android:text="@string/log"
                 android:textAllCaps="false"
                 android:textColor="@color/oper_text_color"
                 android:textSize="20sp" />
@@ -312,7 +312,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="@drawable/oper_button"
-                android:text="m+"
+                android:text="@string/mr"
                 android:textAllCaps="false"
                 android:textColor="@color/oper_text_color"
                 android:textSize="20sp" />
@@ -323,7 +323,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="@drawable/oper_button"
-                android:text="x^2"
+                android:text="@string/x_2"
                 android:textAllCaps="false"
                 android:textColor="@color/oper_text_color"
                 android:textSize="20sp" />
@@ -334,7 +334,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="@drawable/oper_button"
-                android:text="x^3"
+                android:text="@string/x_3"
                 android:textAllCaps="false"
                 android:textColor="@color/oper_text_color"
                 android:textSize="20sp" />
@@ -345,7 +345,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="@drawable/oper_button"
-                android:text="x^y"
+                android:text="@string/x_y"
                 android:textAllCaps="false"
                 android:textColor="@color/oper_text_color"
                 android:textSize="20sp" />
@@ -400,7 +400,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="@drawable/oper_button"
-                android:text="10^x"
+                android:text="@string/_10_x"
                 android:textAllCaps="false"
                 android:textColor="@color/oper_text_color"
                 android:textSize="20sp" />
@@ -411,7 +411,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="@drawable/oper_button"
-                android:text="√"
+                android:text="@string/sqrt"
                 android:textAllCaps="false"
                 android:textColor="@color/oper_text_color"
                 android:textSize="20sp" />
@@ -422,7 +422,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="@drawable/oper_button"
-                android:text="y√x"
+                android:text="@string/y_x"
                 android:textAllCaps="false"
                 android:textColor="@color/oper_text_color"
                 android:textSize="20sp" />
@@ -433,7 +433,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="@drawable/oper_button"
-                android:text="1/X"
+                android:text="@string/_1_x"
                 android:textColor="@color/oper_text_color"
                 android:textSize="20sp" />
 
@@ -461,7 +461,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="@drawable/numbers_button"
-                android:text="±"
+                android:text="@string/negate"
                 android:textSize="20sp" />
 
             <Button

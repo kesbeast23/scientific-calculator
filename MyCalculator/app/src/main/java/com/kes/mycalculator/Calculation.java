@@ -32,6 +32,11 @@ public class Calculation{
      */
     public String currentStatus = "null";
 
+    public void toDecimal(String num){
+        int a=Integer.parseInt(num,2);
+        num= String.valueOf(num);
+        answer=num;
+    }
 
     public Calculation(Context ct){
         ctx = ct;
@@ -62,9 +67,6 @@ public class Calculation{
         unaryOperators.add("10^x");
         unaryOperators.add("e^x");
 
-        /*
-         * binaryOperators in order...
-         */
         binaryOperators.add("rt");
         binaryOperators.add("^");
         binaryOperators.add("mod");
