@@ -79,6 +79,19 @@ public class Calculation{
         num= String.valueOf(a);
         answer=num;
     }
+    public void toBinary(String num){
+
+        int a=Integer.parseInt(num);
+        StringBuffer buf = new StringBuffer();
+
+        while (a !=0){
+            int digit=a%2;
+            buf.append(digit);
+            a=a/2;
+        }
+        buf.reverse();
+        answer=String.valueOf(buf);
+    }
 
     public boolean clear(){
         try {

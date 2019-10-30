@@ -123,20 +123,34 @@ public class Bases extends AppCompatActivity implements View.OnClickListener {
                 sub.setText(calculations.calc(calculations.numbers));
                 break;
             case R.id.decimal:
-
                 main.setText(calculations.getCurrentNumber());
                 String string =main.getText().toString();
-                calculations.toDecimal(string);
-                main.setText(calculations.answer);
-                sub.setText("");
-                Toast toast =Toast.makeText(this,"Conversion Complete",Toast.LENGTH_SHORT);
-                toast.show();
+                try {
+                    calculations.toDecimal(string);
+                    main.setText(calculations.answer);
+                    sub.setText("");
+                    Toast toast =Toast.makeText(this,"Conversion Complete",Toast.LENGTH_SHORT);
+                    toast.show();
+                }catch (Exception e){
+                    main.setText("Error");
+                    sub.setText("");
+                }
+
                 break;
             case R.id.binary:
                 main.setText(calculations.getCurrentNumber());
-                sub.setText(calculations.calc(calculations.numbers));
-                toast =Toast.makeText(this,"Calculation Complete",Toast.LENGTH_SHORT);
-                toast.show();
+                string =main.getText().toString();
+                try {
+                    calculations.toBinary(string);
+                    main.setText(calculations.answer);
+                    sub.setText("");
+                    Toast toast =Toast.makeText(this,"Conversion Complete",Toast.LENGTH_SHORT);
+                    toast.show();
+                }catch (Exception e){
+                    main.setText("Error");
+                    sub.setText("");
+                }
+
                 break;
 
         }
