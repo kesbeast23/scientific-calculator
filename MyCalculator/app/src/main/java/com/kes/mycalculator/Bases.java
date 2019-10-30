@@ -7,7 +7,6 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.util.ArrayList;
 
 public class Bases extends AppCompatActivity implements View.OnClickListener {
 
@@ -16,8 +15,7 @@ public class Bases extends AppCompatActivity implements View.OnClickListener {
 
     private TextView sub;
     private TextView main;
-    private Button clear,plus,minus,b7,b8,b9,multiply,b4,b5,b6,div,b1,b2,b3,
-            equal,dot,b0,plusMinus,back,butBra,butBraClose,mod;
+    private Button clear,b7,b8,b9,b4,b5,b6,b1,b2,b3,b0,decimal,binary,back;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,51 +25,36 @@ public class Bases extends AppCompatActivity implements View.OnClickListener {
         setContentView(R.layout.activity_bases);
         sub =  findViewById(R.id.et);
         main = findViewById(R.id.result);
-        back = findViewById(R.id.back);
+        binary = findViewById(R.id.binary);
         clear =findViewById(R.id.clear);
-        plus =  findViewById(R.id.plus);
-        minus = findViewById(R.id.minus);
+        back =findViewById(R.id.back);
+        decimal =  findViewById(R.id.decimal);
         b7 = findViewById(R.id.b7);
         b8 = findViewById(R.id.b8);
         b9 = findViewById(R.id.b9);
-        multiply = findViewById(R.id.multiply);
         b4 = findViewById(R.id.b4);
         b5 = findViewById(R.id.b5);
         b6 = findViewById(R.id.b6);
-        div = findViewById(R.id.div);
         b1 = findViewById(R.id.b1);
         b2 = findViewById(R.id.b2);
         b3 = findViewById(R.id.b3);
-        equal = findViewById(R.id.equal);
-        dot = findViewById(R.id.dot);
         b0 = findViewById(R.id.b0);
-        plusMinus = findViewById(R.id.plus_minus);
-        butBra = findViewById(R.id.butbra);
-        butBraClose = findViewById(R.id.butbraClose);
-        mod = findViewById(R.id.mod);
+
 
         back.setOnClickListener(this);
         clear.setOnClickListener(this);
-        plus.setOnClickListener(this);
-        minus.setOnClickListener(this);
         b7.setOnClickListener(this);
         b8.setOnClickListener(this);
         b9.setOnClickListener(this);
-        multiply.setOnClickListener(this);
+        decimal.setOnClickListener(this);
         b4.setOnClickListener(this);
         b5.setOnClickListener(this);
         b6.setOnClickListener(this);
-        div.setOnClickListener(this);
+        binary.setOnClickListener(this);
         b1.setOnClickListener(this);
         b2.setOnClickListener(this);
         b3.setOnClickListener(this);
-        equal.setOnClickListener(this);
-        dot.setOnClickListener(this);
         b0.setOnClickListener(this);
-        plusMinus.setOnClickListener(this);
-        butBra.setOnClickListener(this);
-        butBraClose.setOnClickListener(this);
-        mod.setOnClickListener(this);
 
     }
 
@@ -128,10 +111,6 @@ public class Bases extends AppCompatActivity implements View.OnClickListener {
                 calculations.numberClicked("9");
                 main.setText(calculations.getCurrentNumber());
                 sub.setText(calculations.calc(calculations.numbers));
-            case R.id.dot:
-                calculations.decimalClicked();
-                main.setText(calculations.getCurrentNumber());
-                sub.setText(calculations.calc(calculations.numbers));
                 break;
             case R.id.clear:
                 calculations.clear();
@@ -143,52 +122,20 @@ public class Bases extends AppCompatActivity implements View.OnClickListener {
                 main.setText(calculations.getCurrentNumber());
                 sub.setText(calculations.calc(calculations.numbers));
                 break;
-            case R.id.plus:
-                calculations.operatorClicked("+");
+            case R.id.decimal:
+
                 main.setText(calculations.getCurrentNumber());
-                sub.setText(calculations.calc(calculations.numbers));
-                break;
-            case R.id.minus:
-                calculations.operatorClicked("-");
-                main.setText(calculations.getCurrentNumber());
-                sub.setText(calculations.calc(calculations.numbers));
-                break;
-            case R.id.multiply:
-                calculations.operatorClicked("*");
-                main.setText(calculations.getCurrentNumber());
-                sub.setText(calculations.calc(calculations.numbers));
-                break;
-            case R.id.div:
-                calculations.operatorClicked("/");
-                main.setText(calculations.getCurrentNumber());
-                sub.setText(calculations.calc(calculations.numbers));
-                break;
-            case R.id.butbra:
-                calculations.parent_openClicked();
-                main.setText(calculations.getCurrentNumber());
-                sub.setText(calculations.calc(calculations.numbers));
-                break;
-            case R.id.butbraClose:
-                calculations.parent_closeClicked();
-                main.setText(calculations.getCurrentNumber());
-                sub.setText(calculations.calc(calculations.numbers));
-                break;
-            case R.id.mod:
-                calculations.operatorClicked("mod");
-                main.setText(calculations.getCurrentNumber());
-                sub.setText(calculations.calc(calculations.numbers));
-                break;
-            case R.id.plus_minus:
-                calculations.operatorClicked("±");
-                main.setText(calculations.getCurrentNumber());
-                sub.setText(calculations.calc(calculations.numbers));
-                break;
-            case R.id.equal:
-                ArrayList<String> expression = calculations.numbers;
-                calculations.evaluateAnswer();
+                String string =main.getText().toString();
+                calculations.toDecimal(string);
                 main.setText(calculations.answer);
                 sub.setText("");
-                Toast toast =Toast.makeText(this,"Calculation Complete",Toast.LENGTH_SHORT);
+                Toast toast =Toast.makeText(this,"Conversion Complete",Toast.LENGTH_SHORT);
+                toast.show();
+                break;
+            case R.id.binary:
+                main.setText(calculations.getCurrentNumber());
+                sub.setText(calculations.calc(calculations.numbers));
+                toast =Toast.makeText(this,"Calculation Complete",Toast.LENGTH_SHORT);
                 toast.show();
                 break;
 

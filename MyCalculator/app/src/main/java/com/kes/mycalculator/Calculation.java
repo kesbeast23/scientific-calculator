@@ -32,11 +32,7 @@ public class Calculation{
      */
     public String currentStatus = "null";
 
-    public void toDecimal(String num){
-        int a=Integer.parseInt(num,2);
-        num= String.valueOf(num);
-        answer=num;
-    }
+
 
     public Calculation(Context ct){
         ctx = ct;
@@ -77,6 +73,11 @@ public class Calculation{
 
         constants.add("pi");
         constants.add("e");
+    }
+    public void toDecimal(String num){
+        int a=Integer.parseInt(num,2);
+        num= String.valueOf(a);
+        answer=num;
     }
 
     public boolean clear(){
