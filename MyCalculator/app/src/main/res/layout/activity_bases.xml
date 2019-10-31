@@ -192,39 +192,6 @@
             android:layout_weight="1"
             android:orientation="horizontal">
 
-            <Button
-                android:id="@+id/dot"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="@drawable/numbers_button"
-                android:text="@string/dot"
-                android:textSize="24sp" />
-
-            <Button
-                android:id="@+id/b0"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="@drawable/numbers_button"
-                android:text="@string/b0"
-                android:textSize="24sp" />
-
-            <Button
-                android:id="@+id/plus_minus"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="@drawable/numbers_button"
-                android:text="@string/plus_minus"
-                android:textSize="24sp" />
-
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="horizontal">
 
             <Button
                 android:id="@+id/decimal"
@@ -234,6 +201,14 @@
                 android:background="@drawable/equl_button"
                 android:text="DECIMAL"
                 android:textColor="@color/equl_text_color"
+                android:textSize="24sp" />
+            <Button
+                android:id="@+id/b0"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/numbers_button"
+                android:text="@string/b0"
                 android:textSize="24sp" />
             <Button
                 android:id="@+id/binary"
@@ -246,5 +221,6 @@
                 android:textSize="24sp" />
 
         </LinearLayout>
+
     </LinearLayout>
 </LinearLayout>
