@@ -76,7 +76,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="@drawable/oper_button"
-                android:text="bs"
+                android:text="@string/back"
                 android:textColor="@color/oper_text_color"
                 android:textSize="24sp" />
         </LinearLayout>
@@ -93,7 +93,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="@drawable/oper_button"
-                android:text="("
+                android:text="@string/open"
                 android:textColor="@color/oper_text_color"
                 android:textSize="24sp" />
 
@@ -103,7 +103,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="@drawable/oper_button"
-                android:text=")"
+                android:text="@string/closeb"
                 android:textColor="@color/oper_text_color"
                 android:textSize="24sp" />
 
@@ -113,7 +113,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="@drawable/oper_button"
-                android:text="%"
+                android:text="@string/mod"
                 android:textColor="@color/oper_text_color"
                 android:textSize="24sp" />
 
