@@ -1,4 +1,4 @@
-package com.kes.mycalculator;//activity_bases
+package com.kes.mycalculator;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
