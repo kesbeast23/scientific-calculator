@@ -230,6 +230,6 @@ public class Basic extends AppCompatActivity implements View.OnClickListener {
             default:
                 return super.onOptionsItemSelected(item);
         }
-        
+
     }
 }
