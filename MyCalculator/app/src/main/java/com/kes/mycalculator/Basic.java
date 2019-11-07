@@ -1,9 +1,7 @@
 package com.kes.mycalculator;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-
-import android.content.Intent;
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -15,7 +13,9 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
+@SuppressLint("NewApi")
 public class Basic extends AppCompatActivity implements View.OnClickListener {
+
 
     Calculation calculations = new Calculation(this);
 
@@ -79,12 +79,25 @@ public class Basic extends AppCompatActivity implements View.OnClickListener {
         butBraClose.setOnClickListener(this);
         mod.setOnClickListener(this);
 
+        main.setOnLongClickListener(new View.OnLongClickListener() {
+
+            @Override
+            public boolean onLongClick(View v) {
+
+                Basic.this.startActionMode(new ActionBarCallBack(
+                        getApplicationContext()));
+                return true;
+
+            }
+        });
+
     }
 
     @Override
     public void onClick(View v) {
 
-        switch (v.getId()){
+
+        switch (v.getId()) {
             case R.id.b0:
                 calculations.numberClicked("0");
                 main.setText(calculations.getCurrentNumber());
@@ -144,10 +157,10 @@ public class Basic extends AppCompatActivity implements View.OnClickListener {
                 main.setText("0");
                 sub.setText(calculations.calc(calculations.numbers));
                 break;
-           case R.id.back:
-               calculations.bs();
-               main.setText(calculations.getCurrentNumber());
-               sub.setText(calculations.calc(calculations.numbers));
+            case R.id.back:
+                calculations.bs();
+                main.setText(calculations.getCurrentNumber());
+                sub.setText(calculations.calc(calculations.numbers));
                 break;
             case R.id.plus:
                 calculations.operatorClicked("+");
@@ -194,36 +207,28 @@ public class Basic extends AppCompatActivity implements View.OnClickListener {
                 calculations.evaluateAnswer();
                 main.setText(calculations.answer);
                 sub.setText("");
-                Toast toast =Toast.makeText(this,"Calculation Complete",Toast.LENGTH_SHORT);
+                Toast toast = Toast.makeText(this, "Calculation Complete", Toast.LENGTH_SHORT);
                 toast.show();
                 break;
-
         }
     }
-
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
+    public  boolean onCreateOptionsMenu(Menu menu){
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.menu, menu);
         return true;
     }
-
     @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+    public boolean onOptionsItemSelected(MenuItem item){
         switch (item.getItemId()){
             case R.id.item1:
-                Toast.makeText(this,"Settings Selected",Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(this, Help.class);
-                startActivity(intent);
+                Toast.makeText(this,"settings selected",Toast.LENGTH_SHORT).show();
                 return true;
             case R.id.item2:
-                Toast.makeText(this,"Help Selected",Toast.LENGTH_SHORT).show();
-                intent = new Intent(this, Help.class);
-                startActivity(intent);
+                Toast.makeText(this,"Help selected",Toast.LENGTH_SHORT).show();
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
-
         }
 
     }

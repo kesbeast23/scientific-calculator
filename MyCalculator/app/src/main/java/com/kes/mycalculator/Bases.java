@@ -139,7 +139,7 @@ public class Bases extends AppCompatActivity implements View.OnClickListener {
                 break;
             case R.id.binary:
                 main.setText(calculations.getCurrentNumber());
-                string =main.getText().toString();
+                string = main.getText().toString();
                 try {
                     calculations.toBinary(string);
                     main.setText(calculations.answer);
